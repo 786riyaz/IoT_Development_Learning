@@ -20,13 +20,14 @@ const char* const daysOfTheWeek[] PROGMEM = {daysOfTheWeek0, daysOfTheWeek1, day
 
 // Clock variables
 unsigned int year = 2025;
-unsigned char month = 8;
-unsigned char day = 27;
-unsigned char hour = 12;
-unsigned char minute = 35;
+unsigned char month = 12;
+unsigned char day = 12;
+unsigned char hour = 15;
+unsigned char minute = 20;
 unsigned char second = 0;
-unsigned char dayOfWeek = 3; // 3 = Wednesday
+unsigned char dayOfWeek = 6; // 3 = Wednesday
 unsigned char lastSecond = 0;
+
 
 // Pins
 #define BUZZER_PIN 13
@@ -110,7 +111,10 @@ void setup() {
     }
     if (rtc.lostPower()) {
       Serial.println(F("RTC lost power, setting the time!"));
-      rtc.adjust(DateTime(2025, 8, 27, 13, 35, 0)); // Updated to current time
+//      rtc.adjust(DateTime(2025, 8, 27, 13, 35, 0)); // Updated to current time
+//      RRR
+rtc.adjust(DateTime(year, month, day, hour, minute, second)); // Updated to current time
+
     }
     rtc.writeSqwPinMode(DS3231_SquareWave1Hz);
     Serial.println(F("RTC initialized with 1Hz SQW."));
