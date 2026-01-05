@@ -19,13 +19,13 @@ const char daysOfTheWeek6[] PROGMEM = "SAT";
 const char* const daysOfTheWeek[] PROGMEM = {daysOfTheWeek0, daysOfTheWeek1, daysOfTheWeek2, daysOfTheWeek3, daysOfTheWeek4, daysOfTheWeek5, daysOfTheWeek6};
 
 // Clock variables
-unsigned int year = 2025;
-unsigned char month = 12;
-unsigned char day = 12;
-unsigned char hour = 15;
-unsigned char minute = 20;
+unsigned int year = 2026;
+unsigned char month = 1;
+unsigned char day = 1;
+unsigned char hour = 12;
+unsigned char minute = 2;
 unsigned char second = 0;
-unsigned char dayOfWeek = 6; // 3 = Wednesday
+unsigned char dayOfWeek = 4; // 3 = Wednesday
 unsigned char lastSecond = 0;
 
 
